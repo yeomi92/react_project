@@ -2,11 +2,7 @@ import React, {Component} from 'react';
 import queryString from 'query-string'
 
 class Login extends Component {
-    constructor(props){
-        super(props);
-        this.query = queryString.parse(this.props.location.search);
-    }
-    
+    const query = queryString.parse(this.props.location.search);
     render(){
         console.log(this.query)
         return (
@@ -14,10 +10,13 @@ class Login extends Component {
             <div>login</div>
             <div>
                 <span>ID</span>
-                <input placeholder="아이디"/>
+                <input placeholder={this.props.match.params.id}/>
                 <span>PW</span>
-                <input placeholder="비밀번호"/>
-                <button className="btn btn-primary">로그인</button>
+                <input/>
+            </div>
+            <div>
+            {query.login && 
+                <button className="btn btn-primary">로그인</button>}
             </div>
         </div>
         );

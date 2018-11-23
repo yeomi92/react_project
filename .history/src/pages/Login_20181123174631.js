@@ -17,6 +17,8 @@ class Login extends Component {
                 <input placeholder="아이디"/>
                 <span>PW</span>
                 <input placeholder="비밀번호"/>
+            </div>
+            <div>
                 <button className="btn btn-primary">로그인</button>
             </div>
         </div>

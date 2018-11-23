@@ -16,8 +16,11 @@ class Login extends Component {
                 <span>ID</span>
                 <input placeholder="아이디"/>
                 <span>PW</span>
-                <input placeholder="비밀번호"/>
-                <button className="btn btn-primary">로그인</button>
+                <input/>
+            </div>
+            <div>
+            {this.query.login && 
+                <button className="btn btn-primary">로그인</button>}
             </div>
         </div>
         );
